@@ -1,0 +1,28 @@
+const m = require('../model/Music')
+const utils = require('../utils')
+
+const all = {
+    method: 'get',
+    path: '/music/all',
+    func: function(request, response) {
+        const musics = m.all()
+        const r = JSON.stringify(musics)
+        response.send(r)
+    }
+}
+
+const init = {
+    method: 'get',
+    path: '/music/init',
+    func: function(request, response) {
+        m.init()
+        response.send('加载成功')
+    }
+}
+
+const routes = [
+    all,
+    init,
+]
+
+module.exports = routes
