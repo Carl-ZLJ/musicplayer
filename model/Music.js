@@ -80,5 +80,8 @@ m.init = function() {
 }
 
 // m.init()
-
+m.get = function(name) {
+    const data = musicFromPath(name)
+    return data
+}
 module.exports = m

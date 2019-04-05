@@ -20,9 +20,22 @@ const init = {
     }
 }
 
+const play = {
+    method: 'get',
+    path: '/music/:musicName',
+    func: function(request, response) {
+        const musicName = request.params.musicName
+        utils.log('musicName', musicName, request.params)
+        const data = m.get(musicName)
+        const r = JSON.stringify(data)
+        response.send(r)
+    }
+}
+
 const routes = [
     all,
     init,
+    play,
 ]
 
 module.exports = routes
