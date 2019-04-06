@@ -1,17 +1,17 @@
 const ajax = function(request, callback) {
     const r = new XMLHttpRequest()
     r.open(request.method, request.url, true)
-    const header = request.header[0]
-    const value = request.header[1]
-    r.responseType = 'arraybuffer'
-    r.setRequestHeader(header, value)
+    // const header = request.header[0]
+    // const value = request.header[1]
+    // r.responseType = 'arraybuffer'
+    // r.setRequestHeader(header, value)
     r.onreadystatechange = function() {
         if(r.readyState == 4 && r.status == 200) {
             callback(r)
         }
     }
-    const data = JSON.stringify(request.data)
-    r.send(data)
+    // const data = JSON.stringify(request.data)
+    r.send()
 }
 
 const musicApi = function() {

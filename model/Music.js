@@ -32,6 +32,7 @@ function coverUrl(metaData) {
 function getMusicInfo(musicName) {
     const metaData = musicFromPath(musicName)
     dealMetaData(metaData, function(result) {
+        utils.log('result', result)
         const m = new Music(result)
         m.save()
     })
@@ -40,6 +41,7 @@ function getMusicInfo(musicName) {
 // getMusicInfo('戴荃 - 悟空 (Live).mp3')
 
 function Music(metaData) {
+    this.title = metaData.title
     this.artist = metaData.artist
     this.album = metaData.album
     this.genre = metaData.genre
