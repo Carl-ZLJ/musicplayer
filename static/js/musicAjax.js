@@ -1,10 +1,14 @@
 const ajax = function(request, callback) {
     const r = new XMLHttpRequest()
     r.open(request.method, request.url, true)
-    // const header = request.header[0]
-    // const value = request.header[1]
-    // r.responseType = 'arraybuffer'
-    // r.setRequestHeader(header, value)
+    if(request.header != undefined) {
+        for (var k in Object.keys(request.header)) {
+            const key = k
+            const value = request.header[key]
+        }
+        // r.responseType = 'arraybuffer'
+        r.setRequestHeader(key, value)
+    }
     r.onreadystatechange = function() {
         if(r.readyState == 4 && r.status == 200) {
             callback(r)

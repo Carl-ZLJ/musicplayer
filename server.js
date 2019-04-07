@@ -6,6 +6,7 @@ const utils = require('./utils')
 
 const app = express()
 app.use(express.static('static'))
+app.use(express.static('db'))
 app.use(bodyParser.json())
 
 const registerRoutes = function(app, routes) {

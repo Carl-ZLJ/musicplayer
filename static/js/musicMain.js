@@ -15,11 +15,11 @@ function musicTemplate(music) {
 
     let t = `
         <div class="list-item">
-            <div>${title}</div>
-            <div>${artist}</div>
-            <div>${album}</div>
-            <div>${genre}</div>
-            <div>${coverUrl}</div>
+            <div class="item-title">${title}</div>
+            <div class="item-artist">${artist}</div>
+            <div class="item-album">${album}</div>
+            <div class="item-genre">${genre}</div>
+            <img class="item-cover" src="${coverUrl}">
         </div>
     `
     return t

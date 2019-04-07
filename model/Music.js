@@ -45,7 +45,7 @@ function Music(metaData) {
     this.artist = metaData.artist
     this.album = metaData.album
     this.genre = metaData.genre
-    this.coverUrl = coverUrl(metaData)
+    this.coverUrl = coverUrl(metaData).slice(3)
 }
 
 Music.prototype.save = function() {
