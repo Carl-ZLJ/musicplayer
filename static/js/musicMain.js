@@ -6,21 +6,33 @@ const log = console.log.bind(console)
 
 const api = new musicApi()
 
+function timeFromStamp(time) {
+    let seconds = Math.floor(time % 60)
+    if(seconds < 10) {
+        seconds = '0' + seconds
+    }
+    let minutes = Math.floor(time / 60)
+    if(minutes < 10) {
+        minutes = '0' + minutes
+    }
+    return `${minutes}:${seconds}`
+}
+
 function musicTemplate(music) {
     const title = music.title
     const album = music.album
-    const artist = music.artist
-    const genre = music.genre
+    const artist = music.artist[0]
+    const genre = music.genre[0] || 'Other'
     const coverUrl = music.coverUrl
-
+    const duration = timeFromStamp(music.duration)
     let t = `
-        <div class="list-item">
+        <li class="list-item">
             <div class="item-title">${title}</div>
             <div class="item-artist">${artist}</div>
             <div class="item-album">${album}</div>
             <div class="item-genre">${genre}</div>
-            <img class="item-cover" src="${coverUrl}">
-        </div>
+            <div class="item-duration">${duration}</div>
+        </li>
     `
     return t
 }
@@ -32,7 +44,7 @@ function insertMusicAll(musics) {
         html += musicTemplate(music)
     }
     let element = e('.music-list')
-    element.innerHTML = html
+    element.insertAdjacentHTML('beforeend', html)
 }
 
 function insertMusic() {

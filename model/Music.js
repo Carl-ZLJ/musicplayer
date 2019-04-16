@@ -9,7 +9,7 @@ function musicFromPath(musicName) {
 }
 
 function dealMetaData(metaData, callback) {
-    mm(metaData, function(err, result) {
+    mm(metaData, {duration: true}, function(err, result) {
         if(err != null) {
             throw(err)
         } else {
@@ -31,6 +31,7 @@ function coverUrl(metaData) {
 
 function getMusicInfo(musicName) {
     const metaData = musicFromPath(musicName)
+    // utils.log('metaData', metaData)
     dealMetaData(metaData, function(result) {
         utils.log('result', result)
         const m = new Music(result)
@@ -46,6 +47,8 @@ function Music(metaData) {
     this.album = metaData.album
     this.genre = metaData.genre
     this.coverUrl = coverUrl(metaData).slice(3)
+    // 时长
+    this.duration = metaData.duration
 }
 
 Music.prototype.save = function() {

@@ -4,18 +4,54 @@ body {
 }
 
 .container {
-    height: 400px;
-    width: 600px;
-    background-color: #ECF0F1;
-    margin: 100px auto;
-    border-radius: 30px;
+    height: 520px;
+    width: 800px;
+    margin: 50px auto;
 }
 
 .container .music-list {
     font-size: 12px;
+    background-color: #ECF0F1;
+    position: relative;
+    height: 460px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 30px 30px 0 0;
+}
+.list-title {
+    padding-top: 10px;
+}
+.list-title, .list-item {
+    width: 700px;
+    margin: 5px auto;
+    height: 19px;
+}
+.container .music-list .list-title div{
+    border: 1px solid yellow;
+    display: inline-block;
 }
 
-.container .music-list .item-cover {
-    width: 50px;
-    height: 50px;
+.container .music-list .list-item div {
+    display: inline-block;
+    border: 1px solid green;
+}
+/*
+.container .music-list .list-item .item-cover {
+    width: 100px;
+    height: 100px;
+} */
+.item-title, .item-artist, .item-album, .item-genre, .item-duration {
+    width: 120px;
+/* 超出部分文字怎么显示 */
+    text-overflow: ellipsis;
+/* 文字不换行 */
+    white-space: nowrap;
+/* 超出部分隐藏 */
+    overflow: hidden;
+}
+
+.active {
+    background-color: pink;
+    transition: background 0.2s;
 }

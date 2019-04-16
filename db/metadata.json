@@ -1,13 +1,36 @@
 [{
+    "title": "一生何求",
+    "artist": ["马浚伟/吴奇隆/张卫健"],
+    "album": "紫色的回忆",
+    "genre": [],
+    "coverUrl": "一生何求.jpg",
+    "duration": 277
+}, {
     "title": "倩女幽魂 (《夏洛特烦恼》电影插曲_《港囧》电影插曲_《倩女幽魂》电影主题曲)",
     "artist": ["张国荣"],
     "album": "Summer Romance",
     "genre": ["Other"],
-    "coverUrl": "倩女幽魂 (《夏洛特烦恼》电影插曲_《港囧》电影插曲_《倩女幽魂》电影主题曲).jpg"
+    "coverUrl": "倩女幽魂 (《夏洛特烦恼》电影插曲_《港囧》电影插曲_《倩女幽魂》电影主题曲).jpg",
+    "duration": 215.1203125
 }, {
     "title": "悟空 (Live)",
     "artist": ["戴荃"],
     "album": "中国好歌曲第二季 第5期",
     "genre": ["Blues"],
-    "coverUrl": "悟空 (Live).jpg"
+    "coverUrl": "悟空 (Live).jpg",
+    "duration": 200
+}, {
+    "title": "演员",
+    "artist": ["薛之谦"],
+    "album": "绅士",
+    "genre": [],
+    "coverUrl": "演员.jpg",
+    "duration": 261
+}, {
+    "title": "一人饮酒醉",
+    "artist": ["李玉刚/杨树林"],
+    "album": "厉害了！我的歌 第一期",
+    "genre": [],
+    "coverUrl": "一人饮酒醉.jpg",
+    "duration": 229
 }]

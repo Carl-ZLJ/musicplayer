@@ -3,11 +3,7 @@ const fs = require('fs')
 const log = console.log.bind(console)
 
 function writeToFile(path, data) {
-    fs.writeFile(path, data, function(err) {
-        if(err == null) {
-            log('写入成功')
-        }
-    })
+    fs.writeFileSync(path, data)
 }
 
 function fileExist(path) {

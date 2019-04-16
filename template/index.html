@@ -6,12 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>music player index</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/control.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="music-list"></div>
+        <div class="nav">
+
+        </div>
+        <ul class="music-list">
+            <li class="list-title">
+                <div class="item-title">音乐标题</div>
+                <div class="item-artist">歌手</div>
+                <div class="item-album">专辑</div>
+                <div class="item-genre">类型</div>
+                <div class="item-duration">时长</div>
+            </li>
+        </ul>
+        <div class="audio">
+            <audio></audio>
+            <div class="controls">
+                <button class="play-prev">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="play-button">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button class="play-next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <div class="progress">
+                <div class="progress-bar">
+                    <div class="progress-play">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </div>
+                <span class="played-time">00:00</span>
+                <span class="audio-time">00:00</span>
+            </div>
+            <div class="volume">
+                <div class="vol-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <input type="range" class="vol-range" min="0" max="100" value="100">
+            </div>
+        </div>
     </div>
+
     <script src="js/musicAjax.js"></script>
     <script src="js/musicMain.js"></script>
+    <script src="js/musicControl.js"></script>
 </body>
 </html>
